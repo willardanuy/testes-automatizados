@@ -10,7 +10,7 @@ public class ConsultaClientePage extends PageObject {
 	public void consultarCpf(String cpf) throws InterruptedException {
 		
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			new AguardaCarregamento(this.getDriver()).aguardarCarregamentoNovaArquitetura2();
 			
 			$("#cbx-cpf").clear();

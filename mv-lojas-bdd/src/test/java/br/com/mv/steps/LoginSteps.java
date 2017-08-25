@@ -11,7 +11,6 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import br.com.mv.pages.HomePage;
 import net.serenitybdd.core.Serenity;
 import net.thucydides.core.annotations.Steps;
-import net.thucydides.core.util.EnvironmentVariables;
 import net.thucydides.core.util.SystemEnvironmentVariables;
 
 public class LoginSteps {
@@ -50,38 +49,8 @@ public class LoginSteps {
 		
 		// A URL padrão se encontra dentro do arquivo serenity.properties, config.: webdriver.base.url
 		if (url.equals("padrao")) {
-			String urlHomologacao = "";
-			
-			EnvironmentVariables variaveisAmbiente = SystemEnvironmentVariables.createEnvironmentVariables();
-			
-			String urlPadraoPedidosRELOH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoPedidosRELOH");
-			String urlPadraoPedidosMVSH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoPedidosMVSH");
-			
-			String urlPadraoAdmCDRELOH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoAdmCDRELOH");
-			String urlPadraoAdmCDMVSH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoAdmCDMVSH");
-			
-			if (metadata.get("grupoInstancias").equals("Pedidos")) {
-				
-				urlHomologacao = urlPadraoPedidosRELOH;
-				
-				if (metadata.get("base").equals("MVSH")) {
-					urlHomologacao = urlPadraoPedidosMVSH;
-				}
-				
-			} else if (metadata.get("grupoInstancias").equals("AdmCD")) {
-				
-				urlHomologacao = urlPadraoAdmCDRELOH;
-				
-				if (metadata.get("base").equals("MVSH")) {
-					urlHomologacao = urlPadraoAdmCDMVSH;
-				}
-			}
-			
 			//urlInstancia = SystemEnvironmentVariables.createEnvironmentVariables().getProperty(ThucydidesSystemProperty.WEBDRIVER_BASE_URL);
-			//urlInstancia = "http://10.30.232.20:8080/lojas/seguranca?action=login";
-			
-			urlInstancia = urlHomologacao + "/lojas/seguranca?action=login";
-			
+			urlInstancia = "http://10.30.232.20:8080/lojas/seguranca?action=login";
 			System.out.println("urlPadrao: " + urlInstancia);
 			
 		} else if (url.equals("padraoProducao")) {
@@ -113,7 +82,6 @@ public class LoginSteps {
     public void euAcessoPDVWeb(String url) {
 		
 		Boolean receberPedido = Boolean.parseBoolean(SystemEnvironmentVariables.createEnvironmentVariables().getProperty("mvlojas.receber.pedido"));
-		Map<String, String> metadata = HomePage.getTags();
 		
 		if (receberPedido) {
 			
@@ -121,21 +89,7 @@ public class LoginSteps {
 			
 			// A URL padrão se encontra dentro do arquivo serenity.properties, config.: webdriver.base.url
 			if (url.equals("padrao")) {
-				
-				String urlHomologacao = "";
-				
-				EnvironmentVariables variaveisAmbiente = SystemEnvironmentVariables.createEnvironmentVariables();
-				
-				String urlPadraoCaixaRELOH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoCaixaRELOH"); // v56
-				String urlPadraoCaixaMVSH = variaveisAmbiente.getProperty("mvlojas.urlPadraoHomologacaoCaixaMVSH"); // v56
-				
-				urlHomologacao = urlPadraoCaixaRELOH;
-				
-				if (metadata.get("base").equals("MVSH")) {
-					urlHomologacao = urlPadraoCaixaMVSH;
-				}
-				
-				urlInstancia = urlHomologacao + "/mv-admin/";
+				urlInstancia = "http://10.30.237.20:8080/mv-admin/";
 			} else {
 				urlInstancia = url + "/mv-admin/";
 			}

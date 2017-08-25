@@ -6,7 +6,7 @@ De modo que um pedido possa utilizar o roteiro criado
 Scenario: Cadastra um roteiro
 Meta:
 @tag component:Regressao - RELOH
-@context CADASTROS
+@context REGRESSAO
 @base RELOH
 @issue cad-01
 @cad-01
@@ -36,7 +36,7 @@ Then Eu valido mensagem de sucesso do roteiro
 Scenario: Cadastra uma rota
 Meta:
 @tag component:Regressao - RELOH
-@context CADASTROS
+@context REGRESSAO
 @base RELOH
 @issue cad-01
 @cad-01
@@ -56,7 +56,7 @@ And Eu informo a empresa base 5 - RN COMERCIO VAREJISTA S.A RELOH
 Scenario: Cadastra uma sequencia de empenho
 Meta:
 @tag component:Regressao - RELOH
-@context CADASTROS
+@context REGRESSAO
 @base RELOH
 @issue cad-01
 

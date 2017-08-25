@@ -10,7 +10,7 @@ De modo que o pré-recibo esteja aprovado ao final do processo
 Scenario: Elaborar um pedido a vista
 Meta:
 @tag component:Regressão - MVSH
-@context PROCESSOS
+@context REGRESSAO
 @base MVSH
 @issue trkdev-04
 @trkdev-04

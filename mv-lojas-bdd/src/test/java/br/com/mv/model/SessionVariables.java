@@ -5,6 +5,5 @@ public enum SessionVariables {
     NRO_PRE_RECIBO,
     NRO_LOJA,
     COD_NRO_LOJA,
-    NRO_NF_AVULSA,
-    NRO_USUARIO
+    NRO_NF_AVULSA
 }

@@ -1,8 +1,5 @@
 package br.com.mv.pages;
 
-import static br.com.mv.model.SessionVariables.NRO_USUARIO;
-import static br.com.mv.model.SessionVariables.COD_NRO_LOJA;
-
 import java.util.Map;
 
 import br.com.mv.utils.ControleMenu;
@@ -27,12 +24,6 @@ public class HomePage extends PageObject {
 		$("#j_loja").sendKeys(store);
 		Thread.sleep(1000);
 
-		Serenity.setSessionVariable(NRO_USUARIO).to(user.trim());
-		Serenity.setSessionVariable(COD_NRO_LOJA).to(store.trim());
-		
-		String codNroLoja = Serenity.sessionVariableCalled(COD_NRO_LOJA);
-		String nroVendedor = Serenity.sessionVariableCalled(NRO_USUARIO);
-		
 		$("#j_username_fake").sendKeys(user);
 		Thread.sleep(1000);
 

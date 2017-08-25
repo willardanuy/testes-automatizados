@@ -8,7 +8,6 @@ Meta:
 @tag component:Smoke testing Producao - RELOH
 @context SMOKE_TESTING
 @base RELOH
-@grupoInstancias Pedidos
 @issue prd-smk-01
 @prd-smk-01
 
@@ -42,7 +41,6 @@ Meta:
 @tag component:Smoke testing Producao - RELOH
 @context SMOKE_TESTING
 @base RELOH
-@grupoInstancias Pedidos
 @issue prd-smk-01
 @prd-smk-01
 
@@ -57,7 +55,6 @@ Meta:
 @tag component:Smoke testing Producao - RELOH
 @context SMOKE_TESTING
 @base RELOH
-@grupoInstancias Pedidos
 @issue prd-smk-02
 @prd-smk-02
 

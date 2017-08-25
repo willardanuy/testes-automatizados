@@ -13,3 +13,6 @@ interpolated-*.xml
 *.ipr
 out
 *.ignore
+/build/
+/bin/
+.gradle/*
